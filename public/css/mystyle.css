@@ -1,0 +1,77 @@
+body{
+    -webkit-print-color-adjust:exact !important;
+  }
+.panelbutton .btn:focus, .panelbutton .btn:hover {color: white;
+    
+}
+.button{
+    cursor: pointer;
+}
+
+.panel-primary > .panel-heading{
+    background-color: #0076ff;
+border-color: #0076ff;
+}
+
+.desktop{
+    padding-top:5vh;
+}
+
+.texto_grande {
+    font-size: 2.5rem;
+    color: white;
+} 
+#icone_grande {
+    margin-top:2vh;
+    font-size: 8rem;
+    color:#fff;
+} 
+.showprint{
+    display: none;
+}
+
+.center {
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.link-delete{
+    color:red !important;
+}
+
+@media print {
+    .hideprint {
+      display: none;
+    }
+    .showprint{
+        display: block;
+    }
+    .table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #4CAF50 !important;
+        color: white;
+      }
+      table { page-break-inside:auto }
+    tr    { page-break-inside:avoid; page-break-after:auto }
+    thead { display:table-header-group }
+    tfoot { display:table-footer-group }
+    tbody {page-break-after:always;}
+      
+      .page{
+        height: auto !important;
+        overflow: visible;
+      }
+      .page__content{
+        height: auto !important;
+        overflow: visible;
+      }
+  }
+*{
+    -webkit-user-select: text !important;  /* Chrome 49+ */
+    -moz-user-select: text !important;     /* Firefox 43+ */
+    -ms-user-select: text !important;      /* No support yet */
+    user-select: text !important;          /* Likely future */   
+}
